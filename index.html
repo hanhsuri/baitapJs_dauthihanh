@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Mobile Shop</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Icon Font Awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- My Css  -->
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <!-- start loading  -->
+    <div id="loading" style="display: none">
+      <div class="spinner-border text-warning" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <!-- End loading  -->
+
+    <div class="banner">
+      <div class="content">
+        <div class="chonsanpham">
+          <a target="_blank" href="./adminpage.html"
+            ><button class="btn btn-success admin-btn">
+              Đi tới trang Admin
+            </button></a
+          >
+          <div class="form-group">
+            <select class="form-control" name="" id="chonSP">
+              <option value="">Tất cả sản phẩm</option>
+              <option value="apple">Iphone</option>
+              <option value="samsung">Samsung</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="main-cart d-flex" id="main-cart">
+        <div class="col-md-6 col-xl-3 justify-content-center">
+          <div class="card">
+            <div class="top-bar">
+              <p>SAMSUNG</p>
+              <em class="stocks">In Stock</em>
+            </div>
+            <div class="img-container">
+              <img
+                class="product-img"
+                src="https://cdn.tgdd.vn/Products/Images/42/217536/samsung-galaxy-m51-trang-new-600x600-600x600.jpg"
+                alt=""
+              />
+            </div>
+            <div class="details text-white">
+              <div class="name-fav">
+                <strong class="product-name">Samsung Galaxy M51 </strong>
+                <button onclick="this.classList.toggle(fav)" class="heart">
+                  <i class="fas fa-heart"></i>
+                </button>
+              </div>
+              <div class="wrapper">
+                <p>
+                  Camera trước: 32 MP <br />
+                  Camera sau: Chính 64 MP ; Phụ 12 MP, 5 MP, 5 MP
+                </p>
+
+                <p>Thiết kế đột phá, màn hình tuyệt đỉnh</p>
+              </div>
+              <div class="purchase">
+                <p class="product-price">$350</p>
+                <span class="btn-add" id="addItem2">
+                  <div>
+                    <button onclick="addItem()" class="add-btn">
+                      Add <i class="fas fa-chevron-right"></i>
+                    </button></div
+                ></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-3 justify-content-center">
+          <div class="card">
+            <div class="top-bar">
+              <p>SAMSUNG</p>
+              <em class="stocks">In Stock</em>
+            </div>
+            <div class="img-container">
+              <img
+                class="product-img"
+                src="https://cdn.tgdd.vn/Products/Images/42/217536/samsung-galaxy-m51-trang-new-600x600-600x600.jpg"
+                alt=""
+              />
+            </div>
+            <div class="details text-white">
+              <div class="name-fav">
+                <strong class="product-name">Samsung Galaxy M22</strong>
+                <button onclick="this.classList.toggle(fav)" class="heart">
+                  <i class="fas fa-heart"></i>
+                </button>
+              </div>
+              <div class="wrapper">
+                <p>
+                  Camera trước: 32 MP <br />
+                  Camera sau: Chính 12 MP ; Phụ 64 MP, 12 MP
+                </p>
+
+                <p>Thiết kế đột phá, màn hình tuyệt đỉnh</p>
+              </div>
+              <div class="purchase">
+                <p class="product-price">$450</p>
+                <span class="btn-add" id="addItem3">
+                  <div>
+                    <button onclick="addItem()" class="add-btn">
+                      Add <i class="fas fa-chevron-right"></i>
+                    </button></div
+                ></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-3 justify-content-center">
+          <div class="card">
+            <div class="top-bar">
+              <i class="fab fa-apple"></i>
+              <em class="stocks">In Stock</em>
+            </div>
+            <div class="img-container">
+              <img
+                class="product-img"
+                src="https://didongviet.vn/pub/media/catalog/product//i/p/iphone-11-pro-max-256gb-didongviet_23.jpg"
+                alt=""
+              />
+            </div>
+            <div class="details text-white">
+              <div class="name-fav">
+                <strong class="product-name">Iphone 11</strong>
+                <button onclick="this.classList.toggle(fav)" class="heart">
+                  <i class="fas fa-heart"></i>
+                </button>
+              </div>
+              <div class="wrapper">
+                <p>
+                  Camera trước: 32 MP <br />
+                  Camera sau: Camera: Chính 12 MP ; Phụ 64 MP, 12 MP
+                </p>
+
+                <p>Thiết kế đột phá, màn hình tuyệt đỉnh</p>
+              </div>
+              <div class="purchase">
+                <p class="product-price">$1000</p>
+                <span class="btn-add" id="addItem4">
+                  <div>
+                    <button
+                      class="btn-qty"
+                      id="sub4"
+                      onclick="qtyChange(4,'sub')"
+                    >
+                      <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <p class="qty" id="qty4">2</p>
+                    <button
+                      class="btn-qty"
+                      id="add4"
+                      onclick="qtyChange(4,'add')"
+                    >
+                      <i class="fas fa-chevron-right"></i>
+                    </button>
+                  </div>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-3 justify-content-center">
+          <div class="card">
+            <div class="top-bar">
+              <i class="fab fa-apple"></i>
+              <em class="stocks">In Stock</em>
+            </div>
+            <div class="img-container">
+              <img
+                class="product-img"
+                src="https://cdn.tgdd.vn/Products/Images/44/231253/space-1-org.jpg"
+                alt=""
+              />
+            </div>
+            <div class="details text-white">
+              <div class="name-fav">
+                <strong class="product-name">Macbook</strong>
+                <button onclick="this.classList.toggle(fav)" class="heart">
+                  <i class="fas fa-heart"></i>
+                </button>
+              </div>
+              <div class="wrapper">
+                <p>
+                  Camera trước: 32 MP <br />
+                  Camera sau: Chính 12 MP ; Phụ 64 MP, 12 MP
+                </p>
+
+                <p>Thiết kế đột phá, màn hình tuyệt đỉnh</p>
+              </div>
+              <div class="purchase">
+                <p class="product-price">$450</p>
+                <span class="btn-add" id="addItem7">
+                  <div>
+                    <button onclick="addItem(7)" class="add-btn">
+                      Add <i class="fas fa-chevron-right"></i>
+                    </button></div
+                ></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav">
+        <button onclick="opensideNav()">
+          <i class="fas fa-shopping-cart" style="font-size: 2rem"></i>
+        </button>
+        <span class="total-qty" id="total-qty">2</span>
+      </div>
+      <div onclick="closesideNav()" class="cover" id="cover1"></div>
+      <div class="cover purchase-cover" id="purchase-cover"></div>
+      <div class="cart">
+        <div class="side-nav" id="side-nav" style="right: -100%">
+          <button onclick="closesideNav()"><i class="fas fa-times"></i></button>
+          <h2>Cart</h2>
+          <div class="cart-items" id="cart-items">
+            <div class="cart-item">
+              <div class="cart-img">
+                <img
+                  src="https://didongviet.vn/pub/media/catalog/product//i/p/iphone-11-pro-max-256gb-didongviet_23.jpg"
+                  alt=""
+                />
+              </div>
+              <strong class="name">Iphone 11</strong>
+              <span class="qty-change">
+                <div>
+                  <button class="btn-qty" onclick="qtyChange(4,'sub')">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+                  <p class="qty">2</p>
+                  <button class="btn-qty" onclick="qtyChange(4,'add')">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+                </div>
+              </span>
+              <p class="price">$2000</p>
+              <button onclick="removeItem('4')">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          </div>
+          <div class="final">
+            <strong
+              >Total: $ <span class="total" id="tongtien">2000</span></strong
+            >
+            <div class="action">
+              <button onclick="buy(1)" class="btn buy">
+                Purchase
+                <i class="fas fa-credit-card" style="color: #6665dd"></i>
+              </button>
+              <button onclick="clearCart()" class="btn clear">
+                Clear Cart <i class="fas fa-trash" style="color: #bb342f"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="order-now" id="oder-now"></div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+      integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
